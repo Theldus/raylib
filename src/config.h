@@ -31,34 +31,34 @@
 // Module: core - Configuration Flags
 //------------------------------------------------------------------------------------
 // Camera module is included (camera.h) and multiple predefined cameras are available: free, 1st/3rd person, orbital
-#define SUPPORT_CAMERA_SYSTEM       1
+#define SUPPORT_CAMERA_SYSTEM       0
 // Gestures module is included (gestures.h) to support gestures detection: tap, hold, swipe, drag
 #define SUPPORT_GESTURES_SYSTEM     1
 // Mouse gestures are directly mapped like touches and processed by gestures system
 #define SUPPORT_MOUSE_GESTURES      1
 // Reconfigure standard input to receive key inputs, works with SSH connection.
-#define SUPPORT_SSH_KEYBOARD_RPI    1
+#define SUPPORT_SSH_KEYBOARD_RPI    0
 // Draw a mouse pointer on screen
 #define SUPPORT_MOUSE_CURSOR_NATIVE 1
 // Setting a higher resolution can improve the accuracy of time-out intervals in wait functions.
 // However, it can also reduce overall system performance, because the thread scheduler switches tasks more often.
-#define SUPPORT_WINMM_HIGHRES_TIMER 1
+#define SUPPORT_WINMM_HIGHRES_TIMER 0
 // Use busy wait loop for timing sync, if not defined, a high-resolution timer is setup and used
 //#define SUPPORT_BUSY_WAIT_LOOP      1
 // Use a half-busy wait loop, in this case frame sleeps for some time and runs a busy-wait-loop at the end
-#define SUPPORT_HALFBUSY_WAIT_LOOP
+//#define SUPPORT_HALFBUSY_WAIT_LOOP
 // Wait for events passively (sleeping while no events) instead of polling them actively every frame
 //#define SUPPORT_EVENTS_WAITING      1
 // Allow automatic screen capture of current screen pressing F12, defined in KeyCallback()
-#define SUPPORT_SCREEN_CAPTURE      1
+#define SUPPORT_SCREEN_CAPTURE      0
 // Allow automatic gif recording of current screen pressing CTRL+F12, defined in KeyCallback()
-#define SUPPORT_GIF_RECORDING       1
+#define SUPPORT_GIF_RECORDING       0
 // Support CompressData() and DecompressData() functions
-#define SUPPORT_COMPRESSION_API     1
+#define SUPPORT_COMPRESSION_API     0
 // Support saving binary data automatically to a generated storage.data file. This file is managed internally.
-#define SUPPORT_DATA_STORAGE        1
+#define SUPPORT_DATA_STORAGE        0
 // Support VR simulation functionality (stereo rendering)
-#define SUPPORT_VR_SIMULATOR        1
+#define SUPPORT_VR_SIMULATOR        0
 
 // core: Configuration values
 //------------------------------------------------------------------------------------
@@ -68,7 +68,7 @@
     #define MAX_FILEPATH_LENGTH      512        // Maximum length supported for filepaths
 #endif
 
-#define MAX_GAMEPADS                   4        // Max number of gamepads supported
+#define MAX_GAMEPADS                   0        // Max number of gamepads supported
 #define MAX_GAMEPAD_AXIS               8        // Max number of axis supported (per gamepad)
 #define MAX_GAMEPAD_BUTTONS           32        // Max bumber of buttons supported (per gamepad)
 #define MAX_TOUCH_POINTS              10        // Maximum number of touch points supported
@@ -126,23 +126,23 @@
 #define SUPPORT_FILEFORMAT_PNG      1
 //#define SUPPORT_FILEFORMAT_BMP      1
 //#define SUPPORT_FILEFORMAT_TGA      1
-//#define SUPPORT_FILEFORMAT_JPG      1
-#define SUPPORT_FILEFORMAT_GIF      1
+#define SUPPORT_FILEFORMAT_JPG      1
+//#define SUPPORT_FILEFORMAT_GIF      1
 //#define SUPPORT_FILEFORMAT_PSD      1
-#define SUPPORT_FILEFORMAT_DDS      1
-#define SUPPORT_FILEFORMAT_HDR      1
+//#define SUPPORT_FILEFORMAT_DDS      1
+//#define SUPPORT_FILEFORMAT_HDR      1
 //#define SUPPORT_FILEFORMAT_KTX      1
 //#define SUPPORT_FILEFORMAT_ASTC     1
 //#define SUPPORT_FILEFORMAT_PKM      1
 //#define SUPPORT_FILEFORMAT_PVR      1
 
 // Support image export functionality (.png, .bmp, .tga, .jpg)
-#define SUPPORT_IMAGE_EXPORT        1
+#define SUPPORT_IMAGE_EXPORT        0
 // Support procedural image generation functionality (gradient, spot, perlin-noise, cellular)
-#define SUPPORT_IMAGE_GENERATION    1
+#define SUPPORT_IMAGE_GENERATION    0
 // Support multiple image editing functions to scale, adjust colors, flip, draw on images, crop...
 // If not defined, still some functions are supported: ImageFormat(), ImageCrop(), ImageToPOT()
-#define SUPPORT_IMAGE_MANIPULATION  1
+#define SUPPORT_IMAGE_MANIPULATION  0
 
 
 //------------------------------------------------------------------------------------
@@ -152,12 +152,12 @@
 // NOTE: If enabled, uses external module functions to load default raylib font
 #define SUPPORT_DEFAULT_FONT        1
 // Selected desired font fileformats to be supported for loading
-#define SUPPORT_FILEFORMAT_FNT      1
-#define SUPPORT_FILEFORMAT_TTF      1
+#define SUPPORT_FILEFORMAT_FNT      0
+#define SUPPORT_FILEFORMAT_TTF      0
 
 // Support text management functions
 // If not defined, still some functions are supported: TextLength(), TextFormat()
-#define SUPPORT_TEXT_MANIPULATION   1
+#define SUPPORT_TEXT_MANIPULATION   0
 
 // text: Configuration values
 //------------------------------------------------------------------------------------
@@ -171,24 +171,24 @@
 // Module: models - Configuration Flags
 //------------------------------------------------------------------------------------
 // Selected desired model fileformats to be supported for loading
-#define SUPPORT_FILEFORMAT_OBJ      1
-#define SUPPORT_FILEFORMAT_MTL      1
-#define SUPPORT_FILEFORMAT_IQM      1
-#define SUPPORT_FILEFORMAT_GLTF     1
+#define SUPPORT_FILEFORMAT_OBJ      0
+#define SUPPORT_FILEFORMAT_MTL      0
+#define SUPPORT_FILEFORMAT_IQM      0
+#define SUPPORT_FILEFORMAT_GLTF     0
 // Support procedural mesh generation functions, uses external par_shapes.h library
 // NOTE: Some generated meshes DO NOT include generated texture coordinates
-#define SUPPORT_MESH_GENERATION     1
+#define SUPPORT_MESH_GENERATION     0
 
 
 //------------------------------------------------------------------------------------
 // Module: audio - Configuration Flags
 //------------------------------------------------------------------------------------
 // Desired audio fileformats to be supported for loading
-#define SUPPORT_FILEFORMAT_WAV      1
-#define SUPPORT_FILEFORMAT_OGG      1
-#define SUPPORT_FILEFORMAT_XM       1
-#define SUPPORT_FILEFORMAT_MOD      1
-#define SUPPORT_FILEFORMAT_MP3      1
+#define SUPPORT_FILEFORMAT_WAV      0
+#define SUPPORT_FILEFORMAT_OGG      0
+#define SUPPORT_FILEFORMAT_XM       0
+#define SUPPORT_FILEFORMAT_MOD      0
+#define SUPPORT_FILEFORMAT_MP3      0
 //#define SUPPORT_FILEFORMAT_FLAC     1
 
 // audio: Configuration values
