@@ -632,7 +632,6 @@ RAYLIB_INSTALL_PATH ?= $(DESTDIR)/lib
 RAYLIB_H_INSTALL_PATH ?= $(DESTDIR)/include
 
 install :
-ifeq ($(ROOT),root)
     ifeq ($(PLATFORM_OS),LINUX)
         # Attention! You are root, writing files to $(RAYLIB_INSTALL_PATH)
         # and $(RAYLIB_H_INSTALL_PATH). Consult this Makefile for more information.
@@ -660,14 +659,10 @@ ifeq ($(ROOT),root)
     else
 		@echo "This function currently works on GNU/Linux systems. Add yours today (^;"
     endif
-else
-	@echo "Error: Root permissions needed for installation. Try sudo make install"
-endif
 
 # Remove raylib dev files installed on the system
 # TODO: see 'install' target.
 uninstall :
-ifeq ($(ROOT),root)
     # WARNING: You are root, about to delete items from $(RAYLIB_INSTALL_PATH).
     # and $(RAYLIB_H_INSTALL_PATH). Please confirm each item.
     ifeq ($(PLATFORM_OS),LINUX)
@@ -688,9 +683,6 @@ ifeq ($(ROOT),root)
         else
 		@echo "This function currently works on GNU/Linux systems. Add yours today (^;"
     endif
-else
-	@echo "Error: Root permissions needed for uninstallation. Try sudo make uninstall"
-endif
 
 # Clean everything
 clean:
